@@ -40,7 +40,8 @@ p a{
 
 h1{
     font-size: 4rem;
-    position: absolute;
+    position: fixed;
+    z-index: -5;
     top: 0;
     left:0;
     padding: 2rem;
@@ -90,6 +91,10 @@ img{
     } */
 
 main{
+    background: #fff;
+}
+
+.wrapper{
     max-width: 960px;
     margin: 0 auto;
 }
@@ -127,11 +132,15 @@ main{
     margin-bottom: 5rem;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
-    z-index: -5;
+    z-index: -10;
     background: #291e00;
-    display: flex;
+    /* background-image: url(../img/churchill-house-1.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover; */
+    /* display: flex; */
 }
     .row-hero img{
         opacity: 0.5;
@@ -142,7 +151,7 @@ main{
 
     }
     .row-hero p{
-        position: absolute;
+        position: fixed;
         left: 1.5rem;
         bottom: 1.5rem;
         max-width: 60ch;
@@ -151,6 +160,11 @@ main{
         line-height: 2rem;
         border: 0;
     }
+
+.collapsing{
+    /* background: #fff; */
+}    
+
 /* 3 Hamburger menu */
 
 /* [ON BIG SCREEN] */
