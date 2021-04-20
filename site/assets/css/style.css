@@ -222,7 +222,10 @@ main{
   
     /* Toggle Show/Hide Menu */
     #hamitems { display: none; }
-    #hamnav input:checked ~ #hamitems { display: block; }
+    #hamnav input:checked ~ #hamitems { 
+        display: block; 
+        background: red;
+    }
   }
 
 
