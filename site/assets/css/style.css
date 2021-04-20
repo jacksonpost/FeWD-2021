@@ -12,7 +12,7 @@ Notes:
 CONTENTS
 1. elements
 2. classes / IDs
-3. etc.
+3. hamburger
 4. media queries
 */
 
@@ -70,7 +70,7 @@ img{
     max-width: 100%;    
 }
 
-nav{
+/* nav{
     position: fixed;
     top: 2rem;
     display: inline-block;
@@ -87,7 +87,7 @@ nav{
     }
     nav a:hover{
         color: #fff;
-    }
+    } */
 
 main{
     max-width: 960px;
@@ -151,7 +151,67 @@ main{
         line-height: 2rem;
         border: 0;
     }
-/* 3 etc. */
+/* 3 Hamburger menu */
+
+/* [ON BIG SCREEN] */
+/* Wrapper */
+#hamnav {
+    background: none;
+    width: 60ch;
+    /* Optional */
+    position: sticky;
+    top: 0;
+    right: 0;
+  }
+  
+  /* Hide Hamburger icon */
+  #hamnav label, 
+  #hamburger { display: none; }
+  
+  /* Horizontal Menu Items */
+  #hamitems { 
+      /* padding: 1rem; */
+      width: 60ch;
+      background: var(--green);
+      display: flex; 
+      justify-content: flex-end;
+    }
+  #hamitems a {
+    /* width: 20%; 100% / 5 tabs = 20% */
+    padding: 1rem;
+    color: white;
+    text-align: center;
+  }
+  #hamitems a:hover {
+    background: #000;
+  }
+  
+  /* [ON SMALL SCREENS] */
+  @media screen and (max-width: 768px){
+    /* Show Hamburger Icon */
+    #hamnav label { 
+      display: inline-block; 
+      color: white;
+      background: #a02620;
+      font-style: normal;
+      font-size: 1.2em;
+      padding: 10px;
+    }
+  
+    /* Break down menu items into vertical */
+    #hamitems a {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      border-top: 1px solid #333;
+    }
+  
+    /* Toggle Show/Hide Menu */
+    #hamitems { display: none; }
+    #hamnav input:checked ~ #hamitems { display: block; }
+  }
+
+
 /* 4 Media queries - put them last to avoid cascade issues */
 
 @media screen and (max-width: 900px) {
